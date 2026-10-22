@@ -1,0 +1,89 @@
+COMO ADICIONAR AS IMAGENS
+
+O site já está programado para procurar as imagens automaticamente.
+Use JPG com os nomes abaixo (sem acentos, em minúsculas e com hífens).
+
+DRAGÕES:
+Coloque em: assets/dragoes/
+Exemplos:
+- furia-da-noite.jpg
+- furia-da-luz.jpg
+- nadder-mortal.jpg
+- pesadelo-monstruoso.jpg
+- gronckle.jpg
+- ziper-arrepiante.jpg
+- terror-terrivel.jpg
+- morte-rubra.jpg
+- besta-implacavel.jpg
+- corta-tempestade.jpg
+- rumblehorn.jpg
+- hotburple.jpg
+- scuttleclaw.jpg
+- hobblegrunt.jpg
+- raincutter.jpg
+- deathgripper.jpg
+- crimson-goregutter.jpg
+- hobgobbler.jpg
+- skrill.jpg
+- morte-sussurrante.jpg
+- morte-gritante.jpg
+- changewing.jpg
+- scauldron.jpg
+- thunderdrum.jpg
+- speed-stinger.jpg
+- flightmare.jpg
+- dramillion.jpg
+- triple-stryke.jpg
+- razorwhip.jpg
+- eruptodon.jpg
+- sentinela.jpg
+- typhoomerang.jpg
+- smothering-smokebreath.jpg
+- seashocker.jpg
+- catastrophic-quaken.jpg
+- boneknapper.jpg
+- timberjack.jpg
+- snaptrapper.jpg
+- death-song.jpg
+- buffalord.jpg
+- cavern-crasher.jpg
+- armorwing.jpg
+- snow-wraith.jpg
+- sand-wraith.jpg
+- singetail.jpg
+- shellfire.jpg
+- submaripper.jpg
+- shockjaw.jpg
+- slitherwing.jpg
+- fireworm-queen.jpg
+- fireworm.jpg
+- night-terror.jpg
+- sandbuster.jpg
+- windstriker.jpg
+- hackatoo.jpg
+- moldruffle.jpg
+- grapple-grounder.jpg
+
+TREINADORES:
+Coloque em: assets/treinadores/
+- soluco-haddock.jpg
+- astrid-hofferson.jpg
+- perna-de-peixe-ingerman.jpg
+- melequento-jorgenson.jpg
+- cabecaquente-thorston.jpg
+- cabecadura-thorston.jpg
+- valka-haddock.jpg
+- bocao-bonarroto.jpg
+- stoico-o-imenso.jpg
+- eret-filho-de-eret.jpg
+- heather.jpg
+- dagur-o-descontrolado.jpg
+- gustav-larson.jpg
+- mala.jpg
+- throk.jpg
+- atali.jpg
+
+ILHA DE BERK:
+Coloque em: assets/berk/ilha-de-berk.jpg
+
+Se uma imagem ainda não existir, o site mostra automaticamente um quadro indicando o caminho e o nome do arquivo que deve ser adicionado.
