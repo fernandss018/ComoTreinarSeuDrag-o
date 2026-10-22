@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#090d10" />
+  <title>Academia de Dragões — Berk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mist mist-a"></div><div class="mist mist-b"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Academia de Dragões">
+      <span class="brand-mark">🐉</span>
+      <span><strong>ACADEMIA DE DRAGÕES</strong><small>ILHA DE BERK</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <nav id="nav">
+      <a href="#home">Início</a>
+      <a href="#dragoes">Dragões</a>
+      <a href="#treinadores">Treinadores</a>
+      <a href="#berk">Berk</a>
+      <a href="#academia">Academia</a>
+      <a href="#carteirinha">Carteirinha</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page hero active" id="home">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">BEM-VINDO A BERK</span>
+        <h1>Onde vikings e <span>dragões</span> aprendem a voar juntos.</h1>
+        <p>Explore espécies, conheça os treinadores, descubra locais importantes da ilha e carregue sua própria carteirinha da Academia de Dragões.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#dragoes">Explorar dragões</a>
+          <a class="btn ghost" href="#carteirinha">Ver carteirinha</a>
+        </div>
+        <div class="stats">
+          <div><b id="dragonCount">0</b><span>espécies no catálogo</span></div>
+          <div><b id="trainerCount">0</b><span>treinadores e aliados</span></div>
+          <div><b>7</b><span>áreas da ilha</span></div>
+        </div>
+      </div>
+      <div class="hero-art reveal delay">
+        <div class="moon"></div>
+        <div class="mountain m1"></div><div class="mountain m2"></div><div class="mountain m3"></div>
+        <div class="dragon-orbit"><span>🐉</span></div>
+        <div class="hero-card glass">
+          <small>MISSÃO DO DIA</small>
+          <h3>Reconhecimento aéreo</h3>
+          <p>Escolha um dragão no catálogo e memorize sua classe e principal característica.</p>
+          <button class="text-btn" id="randomDragonBtn">Sortear dragão →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="dragoes">
+      <div class="section-head">
+        <div><span class="eyebrow">BESTIÁRIO DE BERK</span><h2>Catálogo de Dragões</h2><p>Um catálogo ampliado com espécies dos filmes, curtas e séries. Cada card já possui um espaço pronto para você inserir sua própria imagem.</p></div>
+        <div class="controls">
+          <input id="dragonSearch" type="search" placeholder="Buscar dragão ou espécie..." />
+          <select id="classFilter">
+            <option value="todos">Todas as classes</option>
+            <option value="Ataque">Ataque</option><option value="Pedregulho">Pedregulho</option><option value="Rastreador">Rastreador</option>
+            <option value="Afiada">Afiada</option><option value="Maré">Maré</option><option value="Mistério">Mistério</option><option value="Trovão">Trovão</option>
+          </select>
+        </div>
+      </div>
+      <div class="legend"><span>🎬 Filme</span><span>📺 Universo expandido</span><span>💡 Clique em um card para detalhes</span></div>
+      <div class="dragon-grid" id="dragonGrid"></div>
+    </section>
+
+    <section class="page" id="treinadores">
+      <div class="section-head"><div><span class="eyebrow">CAVALEIROS DE BERK</span><h2>Treinadores & Aliados</h2><p>Cavaleiros, mentores e aliados ligados à Academia e às aventuras de Berk, todos com espaço de imagem configurado.</p></div></div>
+      <div class="trainer-grid" id="trainerGrid"></div>
+    </section>
+
+    <section class="page" id="berk">
+      <div class="section-head"><div><span class="eyebrow">MAPA DA ILHA</span><h2>Explore Berk</h2><p>Uma visão estilizada dos locais mais importantes para um aluno da Academia.</p></div></div>
+      <div class="map-wrap glass">
+        <div class="map-island">
+          <img class="berk-photo" src="assets/berk/ilha-de-berk.jpg" alt="Ilha de Berk" onerror="this.style.display='none';document.querySelector('.berk-placeholder').style.display='grid'">
+          <div class="berk-placeholder"><b>🏝️</b><span>Adicione sua imagem em:<br><strong>assets/berk/ilha-de-berk.jpg</strong></span></div>
+          <button class="pin p1" data-place="Grande Salão">1</button>
+          <button class="pin p2" data-place="Arena de Treinamento">2</button>
+          <button class="pin p3" data-place="Forja do Bocão">3</button>
+          <button class="pin p4" data-place="Penhasco de Voo">4</button>
+          <button class="pin p5" data-place="Porto de Berk">5</button>
+          <button class="pin p6" data-place="Bosque de Treino">6</button>
+          <button class="pin p7" data-place="Academia de Dragões">7</button>
+          <div class="island-label">BERK</div>
+        </div>
+        <div class="place-panel" id="placePanel"><span class="eyebrow">LOCAL SELECIONADO</span><h3>Academia de Dragões</h3><p>Centro de estudos, treinamento e integração entre cavaleiros e dragões.</p></div>
+      </div>
+    </section>
+
+    <section class="page" id="academia">
+      <div class="section-head"><div><span class="eyebrow">VIDA DE ALUNO</span><h2>Academia de Dragões</h2><p>Disciplinas, progressão e quadro de missões.</p></div></div>
+      <div class="academy-layout">
+        <div class="course-list">
+          <article class="course glass"><span>01</span><div><h3>Identificação de Espécies</h3><p>Classes, hábitos, sinais e comportamento.</p></div><b>92%</b></article>
+          <article class="course glass"><span>02</span><div><h3>Voo e Navegação</h3><p>Formação aérea, clima e rotas seguras.</p></div><b>84%</b></article>
+          <article class="course glass"><span>03</span><div><h3>Cuidados com Dragões</h3><p>Alimentação, confiança e bem-estar.</p></div><b>88%</b></article>
+          <article class="course glass"><span>04</span><div><h3>Estratégia Viking</h3><p>Comunicação, resgate e trabalho em equipe.</p></div><b>76%</b></article>
+        </div>
+        <aside class="mission-board glass">
+          <span class="eyebrow">QUADRO DE MISSÕES</span>
+          <h3>Próximos desafios</h3>
+          <label><input type="checkbox"> Catalogar 3 espécies</label>
+          <label><input type="checkbox"> Completar voo costeiro</label>
+          <label><input type="checkbox"> Visitar a forja</label>
+          <label><input type="checkbox"> Concluir o quiz</label>
+          <div class="rank"><small>SEU POSTO</small><b>Aprendiz de Cavaleiro</b><div><i style="width:68%"></i></div><span>68% para o próximo nível</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page" id="carteirinha">
+      <div class="section-head"><div><span class="eyebrow">IDENTIFICAÇÃO</span><h2>Carteirinha Digital</h2><p>Layout inspirado no protótipo anterior: fundo escuro, moldura vermelha e cartão claro.</p></div></div>
+      <div class="id-layout">
+        <div class="phone-card">
+          <div class="phone-top"><button onclick="location.hash='home'">←</button><b>Carteirinha</b><span>•••</span></div>
+          <div class="id-shell">
+            <div class="id-brand">
+              <div><strong>ACADEMIA</strong><small>DE DRAGÕES • BERK</small></div><span class="crest">🐉</span>
+            </div>
+            <div class="id-title">CARTEIRINHA DIGITAL</div>
+            <div class="id-main">
+              <div class="photo-col"><img src="assets/avatar.jpg" alt="Foto do aluno"><div class="signature">Samuel</div></div>
+              <div class="id-data">
+                <small>NOME</small><b>Samuel Fernandes</b>
+                <small>CURSO</small><b>Treinamento de Dragões</b>
+                <small>UNIDADE</small><b>Academia de Berk</b>
+                <small>REGISTRO ACADÊMICO</small><b>BERK-2026-0718</b>
+                <span class="valid">VÁLIDA ATÉ<br><b>07/2027</b></span>
+              </div>
+            </div>
+            <div class="id-scene"><div class="silhouette">🐉</div><blockquote>“A confiança vem do treino. A vitória vem da persistência.”<cite>— Academia de Berk</cite></blockquote></div>
+          </div>
+          <div class="info-box"><b>ⓘ Informações importantes</b><ul><li>Documento pessoal e intransferível.</li><li>Válida como identificação da Academia de Dragões.</li><li>Em caso de perda, solicite uma nova via ao Grande Salão.</li></ul></div>
+          <button class="download-btn" id="printCard">⇩ Imprimir / salvar em PDF</button>
+        </div>
+        <div class="id-side">
+          <article class="glass"><span class="eyebrow">PERSONALIZE</span><h3>Dados do aluno</h3><label>Nome<input id="studentName" value="Samuel Fernandes"></label><label>Curso<input id="studentCourse" value="Treinamento de Dragões"></label><label>Registro<input id="studentReg" value="BERK-2026-0718"></label><button class="btn primary" id="updateCard">Atualizar carteirinha</button></article>
+          <article class="glass ref-box"><span class="eyebrow">REFERÊNCIA</span><h3>Protótipo anterior</h3><img src="assets/referencia_carteirinha.jpg" alt="Protótipo anterior da carteirinha"><p>A estrutura visual foi mantida: topo escuro, marca em vermelho, cartão claro e área inferior temática.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="quiz">
+      <div class="section-head"><div><span class="eyebrow">PROVA DE CAVALEIRO</span><h2>Quiz da Academia</h2><p>Responda cinco perguntas e descubra sua patente.</p></div></div>
+      <div class="quiz-card glass" id="quizCard"></div>
+    </section>
+  </main>
+
+  <footer><span>🐉 Academia de Dragões — Projeto de fã para fins educacionais</span><span>HTML • CSS • JavaScript</span></footer>
+
+  <dialog id="dragonModal"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></dialog>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
